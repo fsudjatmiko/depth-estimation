@@ -45,6 +45,3 @@ depth-estimation/
 ├── nearest_objects.json      # Output file with detected objects
 └── README.md                 # Project documentation
 ```
-
-### Input Image
-![Input Image](https://putyourphotohere.example/image.jpg)
