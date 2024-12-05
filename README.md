@@ -1,4 +1,4 @@
-# Depth Estimation and Object Detection
+# Depth Estimation
 
 ## Installation
 
