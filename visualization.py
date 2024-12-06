@@ -4,7 +4,7 @@ import numpy as np
 def visualize_depth_map(image, depth_in_meters, detected_objects):
     # Visualize the depth map with object detection boxes
     fig, ax = plt.subplots(1, figsize=(10, 6))  # Adjust the figure size as needed
-    im = ax.imshow(depth_in_meters, cmap='plasma')  # Visualize the depth map
+    im = ax.imshow(depth_in_meters, cmap='plasma', interpolation='bicubic')  # Use bicubic interpolation
 
     for obj in detected_objects:
         x0, y0, x1, y1 = map(int, obj['bbox'])

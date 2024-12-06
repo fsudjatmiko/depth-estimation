@@ -6,7 +6,7 @@ from object_detection import detect_objects
 from visualization import visualize_depth_map
 
 # Load an image
-url = "https://putyourphotohere.example/image.jpg"  # Replace this URL with your own image URL
+url = "https://huggingface.co/datasets/huggingface/documentation-images/resolve/main/transformers/tasks/depth-estimation-example.jpg"  # Replace this URL with your own image URL
 image = Image.open(requests.get(url, stream=True).raw)
 
 # Estimate depth
