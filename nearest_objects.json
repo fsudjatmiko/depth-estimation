@@ -1,42 +1,142 @@
 [
     {
-        "label": "backpack",
-        "depth_meters": 0.20623500645160675,
+        "label": "tv",
+        "depth_meters": 3.6,
         "bbox": [
-            195,
-            193,
+            145,
+            45,
+            175,
+            67
+        ]
+    },
+    {
+        "label": "tv",
+        "depth_meters": 3.3,
+        "bbox": [
+            91,
+            46,
+            129,
+            72
+        ]
+    },
+    {
+        "label": "tv",
+        "depth_meters": 4.2,
+        "bbox": [
+            192,
+            44,
+            217,
+            64
+        ]
+    },
+    {
+        "label": "tv",
+        "depth_meters": 2.6,
+        "bbox": [
+            15,
+            48,
+            62,
+            79
+        ]
+    },
+    {
+        "label": "tv",
+        "depth_meters": 4.7,
+        "bbox": [
+            261,
+            41,
+            278,
+            58
+        ]
+    },
+    {
+        "label": "chair",
+        "depth_meters": 4.4,
+        "bbox": [
             303,
-            366
+            54,
+            326,
+            83
         ]
     },
     {
-        "label": "person",
-        "depth_meters": 0.8105559945106506,
+        "label": "tv",
+        "depth_meters": 4.5,
         "bbox": [
-            189,
-            118,
-            306,
-            422
+            228,
+            42,
+            248,
+            61
         ]
     },
     {
-        "label": "person",
-        "depth_meters": 1.0215411186218262,
+        "label": "chair",
+        "depth_meters": 3.3,
         "bbox": [
-            393,
+            155,
+            68,
+            200,
+            120
+        ]
+    },
+    {
+        "label": "chair",
+        "depth_meters": 1.9,
+        "bbox": [
+            30,
+            77,
+            81,
+            145
+        ]
+    },
+    {
+        "label": "tv",
+        "depth_meters": 4.9,
+        "bbox": [
+            288,
+            40,
+            302,
+            56
+        ]
+    },
+    {
+        "label": "chair",
+        "depth_meters": 3.7,
+        "bbox": [
+            203,
+            62,
+            235,
+            111
+        ]
+    },
+    {
+        "label": "tv",
+        "depth_meters": 3.1,
+        "bbox": [
+            57,
+            28,
+            90,
+            80
+        ]
+    },
+    {
+        "label": "chair",
+        "depth_meters": 2.9,
+        "bbox": [
+            110,
+            72,
             152,
-            534,
-            422
+            128
         ]
     },
     {
-        "label": "car",
-        "depth_meters": 1.7898234128952026,
+        "label": "keyboard",
+        "depth_meters": 2.0,
         "bbox": [
-            5,
-            161,
-            417,
-            353
+            1,
+            83,
+            32,
+            94
         ]
     }
 ]

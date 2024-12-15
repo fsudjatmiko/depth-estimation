@@ -1,15 +1,19 @@
+import os
 from ultralytics import YOLO
 import numpy as np
+import contextlib
 
 # Load the YOLOv8 model
 detection_model = YOLO('yolov8n.pt')
 
 def detect_objects(image, depth_in_meters):
-    # Perform object detection using YOLOv8
-    results = detection_model(image)
+    # Redirect stdout to suppress YOLOv8 output
+    with open(os.devnull, 'w') as f, contextlib.redirect_stdout(f):
+        # Perform object detection using YOLOv8
+        results = detection_model(image)
 
     # Set a confidence threshold
-    confidence_threshold = 0.5
+    confidence_threshold = 0.3
 
     # Collect detected objects with their average depth
     detected_objects = []
@@ -27,11 +31,9 @@ def detect_objects(image, depth_in_meters):
                 if not np.isnan(avg_depth) and avg_depth > 0:  # Ignore objects with 0 meters depth
                     detected_objects.append({
                         "label": detection_model.names[int(box.cls)],  # Convert to native int type and get label name
-                        "depth_meters": float(avg_depth),  # Convert to native float type and include unit
+                        "depth_meters": round(float(avg_depth), 1),  # Convert to native float type and round to 1 decimal place
                         "bbox": [x0, y0, x1, y1]  # Include bounding box coordinates
                     })
 
-    # Sort the objects by their average depth and select the 4 nearest objects
-    detected_objects = sorted(detected_objects, key=lambda x: x["depth_meters"])[:4]
-
+    # Return all detected objects
     return detected_objects
